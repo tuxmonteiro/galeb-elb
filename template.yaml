@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+    galeb-elb
+
+Globals:
+    Function:
+        Timeout: 20
+
+
+Resources:
+
+    HelloWorldFunction:
+        Type: AWS::Serverless::Function
+        Properties:
+            CodeUri: target/galeb-elb-0.0.1.jar
+            Handler: io.galeb.elb.lambda.MainHandler::handleRequest
+            Runtime: java8
+            Events:
+                HelloWorld:
+                    Type: Schedule
+                    Properties:
+                        Schedule: 'rate(5 seconds)'

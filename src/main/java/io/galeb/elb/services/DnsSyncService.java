@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class DnsSyncService {
 
-    public void sync(Map<String, Object> config) {
+    public void sync(String virtualhostName, Map<String, Object> loadBalancer) {
 
     }
 }

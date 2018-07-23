@@ -16,14 +16,14 @@
 
 package io.galeb.elb.services;
 
+import java.util.Collections;
 import java.util.Map;
 import org.springframework.stereotype.Service;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 @Service
 public class UpdateService {
 
     public Map<String, Object> getConfig() throws RuntimeException {
-        throw new NotImplementedException();
+        return Collections.emptyMap();
     }
 }

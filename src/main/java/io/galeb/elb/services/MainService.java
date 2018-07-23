@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class MainService {
 
-    private final AlbService albService;
+    private final ElbService albService;
 
     @Autowired
-    public MainService(AlbService albService) {
+    public MainService(ElbService albService) {
         this.albService = albService;
     }
 

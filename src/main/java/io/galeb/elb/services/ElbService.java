@@ -39,19 +39,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AlbService {
+public class ElbService {
 
     private static final String HOST_HEADER = "host-header";
     private static final String PATH_PATTERN = "path-pattern";
 
-    private static final Logger LOG = Logger.getLogger(AlbService.class);
+    private static final Logger LOG = Logger.getLogger(ElbService.class);
     private static final ObjectMapper mapper = new ObjectMapper();
 
     private final UpdateService updateService;
     private final DnsSyncService dnsSyncService;
 
     @Autowired
-    public AlbService(UpdateService updateService, DnsSyncService dnsSyncService) {
+    public ElbService(UpdateService updateService, DnsSyncService dnsSyncService) {
         this.updateService = updateService;
         this.dnsSyncService = dnsSyncService;
     }
